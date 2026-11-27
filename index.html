@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso de Programação Básica em Python</title>
+
+  <title>Extensão VII | Curso de Python</title>
 
   <style>
     * {
@@ -15,74 +16,162 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f9;
+      background: #f3f5f9;
       color: #263238;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      background: #14213d;
+      background: linear-gradient(135deg, #14213d, #234b78);
       color: white;
-      padding: 35px 20px;
       text-align: center;
+      padding: 55px 20px;
     }
 
     header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
     }
 
     header p {
-      color: #dce4f2;
+      color: #dce7f5;
+      font-size: 1.1rem;
+    }
+
+    .instituicao {
+      font-size: 0.95rem;
+      margin-top: 12px;
+      color: #c8d8eb;
     }
 
     nav {
-      background: #20365f;
-      padding: 13px;
-      text-align: center;
+      background: #ffffff;
+      padding: 16px 10px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px #00000012;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 13px;
+    nav button {
+      border: none;
+      background: #e8edf4;
+      color: #20365f;
+      padding: 12px 24px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 15px;
       font-weight: bold;
+      transition: 0.2s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav button:hover {
+      background: #d5e1ef;
+    }
+
+    nav button.ativo {
+      background: #1769aa;
+      color: white;
     }
 
     .container {
       width: 90%;
       max-width: 1100px;
-      margin: 30px auto;
+      margin: 35px auto;
+      min-height: 450px;
     }
 
-    .intro {
+    .pagina {
+      display: none;
+      animation: aparecer 0.3s ease;
+    }
+
+    .pagina.ativa {
+      display: block;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .bloco {
       background: white;
-      padding: 28px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 8px #00000012;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px #0000000d;
     }
 
     h2 {
       color: #14213d;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
+    }
+
+    h3 {
+      color: #20365f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    .dados {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .dado {
+      background: #f1f5fa;
+      border-left: 4px solid #1769aa;
+      padding: 17px;
+      border-radius: 7px;
+    }
+
+    .dado strong {
+      display: block;
+      color: #14213d;
+      margin-bottom: 5px;
+    }
+
+    .objetivos {
+      padding-left: 22px;
+    }
+
+    .objetivos li {
+      margin-bottom: 9px;
     }
 
     .aulas {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .aula {
       background: white;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 8px #00000012;
+      box-shadow: 0 3px 12px #00000012;
+      transition: transform 0.2s;
+    }
+
+    .aula:hover {
+      transform: translateY(-4px);
     }
 
     .aula img {
@@ -91,57 +180,69 @@
     }
 
     .aula-conteudo {
-      padding: 18px;
+      padding: 19px;
     }
 
     .aula h3 {
-      color: #14213d;
-      margin-bottom: 8px;
+      font-size: 1.05rem;
     }
 
     .aula p {
-      margin-bottom: 15px;
       color: #536170;
+      font-size: 0.95rem;
+      min-height: 55px;
     }
 
     .botao {
       display: inline-block;
       background: #1769aa;
       color: white;
-      padding: 10px 16px;
+      padding: 10px 17px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
     }
 
     .botao:hover {
       background: #104d80;
     }
 
-    .relatorio {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      margin-top: 30px;
-      box-shadow: 0 2px 8px #00000012;
+    .relatorio-area {
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .icone-pdf {
+      font-size: 55px;
+      margin-bottom: 15px;
     }
 
     footer {
       background: #14213d;
       color: white;
       text-align: center;
-      padding: 22px;
-      margin-top: 40px;
+      padding: 25px 15px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin-bottom: 5px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
       }
 
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
+      nav button {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+
+      .bloco {
+        padding: 22px;
       }
     }
   </style>
@@ -152,39 +253,202 @@
   <header>
     <h1>Curso de Programação Básica em Python</h1>
     <p>Projeto de Extensão VII — 2026</p>
+    <div class="instituicao">
+      UNIFIL — Centro Universitário
+    </div>
   </header>
 
   <nav>
-    <a href="#sobre">Sobre o curso</a>
-    <a href="#aulas">Aulas</a>
-    <a href="#relatorio">Relatório</a>
+    <button class="ativo" onclick="mostrarPagina('sobre', this)">
+      Sobre o curso
+    </button>
+
+    <button onclick="mostrarPagina('aulas', this)">
+      Aulas
+    </button>
+
+    <button onclick="mostrarPagina('relatorio', this)">
+      Relatório
+    </button>
   </nav>
 
   <main class="container">
 
-    <section class="intro" id="sobre">
-      <h2>Sobre o projeto</h2>
+    <!-- SOBRE O CURSO -->
 
-      <p>
-        Este site apresenta o projeto de extensão Curso de Programação
-        Básica em Python, desenvolvido com o objetivo de introduzir
-        conceitos fundamentais de programação para pessoas iniciantes.
-      </p>
+    <section id="sobre" class="pagina ativa">
 
-      <p>
-        O curso utiliza a linguagem Python e o ambiente Google Colab,
-        com explicações progressivas, exemplos práticos e atividades
-        que facilitam o aprendizado.
-      </p>
+      <div class="bloco">
+        <h2>Apresentação do projeto</h2>
 
-      <p>
-        O conteúdo está organizado em uma introdução e dez aulas,
-        disponibilizadas em vídeo no YouTube.
-      </p>
+        <p>
+          O presente trabalho faz parte do Projeto de Extensão VII,
+          desenvolvido no âmbito da UNIFIL, e tem como proposta a
+          criação e disponibilização de um curso introdutório de
+          Programação Básica em Python.
+        </p>
+
+        <p>
+          O projeto foi elaborado com o objetivo de compartilhar
+          conhecimentos básicos de programação, proporcionando
+          aos participantes uma primeira experiência com a lógica
+          computacional e com a linguagem Python.
+        </p>
+
+        <p>
+          O conteúdo foi organizado de maneira progressiva,
+          começando pelos conceitos iniciais de programação e
+          avançando até a construção de um pequeno projeto prático:
+          uma calculadora interativa.
+        </p>
+
+        <p>
+          Para facilitar o acesso e o acompanhamento das aulas,
+          os conteúdos foram disponibilizados em vídeos no YouTube,
+          utilizando o Google Colab como ambiente para desenvolver
+          e executar os exemplos de programação.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <h2>Identificação acadêmica</h2>
+
+        <div class="dados">
+
+          <div class="dado">
+            <strong>Instituição</strong>
+            UNIFIL
+          </div>
+
+          <div class="dado">
+            <strong>Aluno</strong>
+            Matheus Gabriel dos Santos Silva
+          </div>
+
+          <div class="dado">
+            <strong>Curso de graduação</strong>
+            Ciência de Dados e Inteligência Artificial
+          </div>
+
+          <div class="dado">
+            <strong>Projeto</strong>
+            Extensão VII
+          </div>
+
+          <div class="dado">
+            <strong>Área do projeto</strong>
+            Ensino e introdução à programação
+          </div>
+
+          <div class="dado">
+            <strong>Ano</strong>
+            2026
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bloco">
+        <h2>Objetivos do projeto</h2>
+
+        <p>
+          O principal objetivo é introduzir os fundamentos da
+          programação por meio da linguagem Python, tornando o
+          aprendizado acessível para pessoas que ainda não possuem
+          experiência na área.
+        </p>
+
+        <ul class="objetivos">
+          <li>Apresentar os conceitos fundamentais da programação.</li>
+          <li>Introduzir a linguagem Python e sua utilização.</li>
+          <li>Ensinar o uso do ambiente Google Colab.</li>
+          <li>Demonstrar a utilização de variáveis e tipos de dados.</li>
+          <li>Trabalhar operações matemáticas e entrada de dados.</li>
+          <li>Apresentar estruturas condicionais e de repetição.</li>
+          <li>Desenvolver conhecimentos básicos sobre listas.</li>
+          <li>Aplicar os conhecimentos em um projeto prático final.</li>
+        </ul>
+      </div>
+
+      <div class="bloco">
+        <h2>Metodologia</h2>
+
+        <p>
+          O curso foi estruturado em uma introdução e dez aulas
+          sequenciais, com explicações teóricas e demonstrações
+          práticas. A organização progressiva permite que os
+          participantes acompanhem os conteúdos desde os primeiros
+          comandos até a construção de um programa funcional.
+        </p>
+
+        <p>
+          Durante as aulas, são utilizados exemplos de código
+          desenvolvidos em Python no Google Colab, permitindo
+          visualizar a execução dos comandos e compreender
+          sua aplicação.
+        </p>
+      </div>
+
+      <div class="bloco">
+        <h2>Ferramentas utilizadas</h2>
+
+        <div class="dados">
+
+          <div class="dado">
+            <strong>Python</strong>
+            Linguagem de programação utilizada nas atividades.
+          </div>
+
+          <div class="dado">
+            <strong>Google Colab</strong>
+            Ambiente online para escrever e executar códigos.
+          </div>
+
+          <div class="dado">
+            <strong>YouTube</strong>
+            Plataforma utilizada para disponibilizar as aulas.
+          </div>
+
+          <div class="dado">
+            <strong>PowerPoint</strong>
+            Ferramenta de apoio para a elaboração das apresentações.
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bloco">
+        <h2>Projeto final</h2>
+
+        <p>
+          Como atividade de encerramento, o curso apresenta a
+          construção de uma calculadora interativa em Python.
+          O programa solicita o nome do usuário e dois números,
+          realiza operações matemáticas e apresenta os resultados.
+        </p>
+
+        <p>
+          Essa atividade permite aplicar conhecimentos trabalhados
+          durante o curso, como variáveis, entrada de dados,
+          conversão de tipos e operações matemáticas.
+        </p>
+      </div>
+
     </section>
 
-    <section id="aulas">
-      <h2>Conteúdo do curso</h2>
+    <!-- AULAS -->
+
+    <section id="aulas" class="pagina">
+
+      <div class="bloco">
+        <h2>Aulas do curso</h2>
+
+        <p>
+          Acompanhe a sequência de conteúdos do curso de
+          Programação Básica em Python. Clique em cada botão
+          para assistir à respectiva aula no YouTube.
+        </p>
+      </div>
 
       <div class="aulas">
 
@@ -290,24 +554,71 @@
       </div>
     </section>
 
-    <section class="relatorio" id="relatorio">
-      <h2>Relatório do projeto</h2>
-      <p>
-        Consulte o relatório com a descrição do projeto, seus objetivos,
-        metodologia, conteúdos desenvolvidos e resultados.
-      </p>
-      <br>
-      <a class="botao" href="relatorio-extensao-vii.pdf" target="_blank">
-        Visualizar relatório em PDF
-      </a>
+    <!-- RELATÓRIO -->
+
+    <section id="relatorio" class="pagina">
+
+      <div class="bloco relatorio-area">
+
+        <div class="icone-pdf">📄</div>
+
+        <h2>Relatório do projeto</h2>
+
+        <p>
+          Nesta seção está disponível o relatório acadêmico
+          referente ao Projeto de Extensão VII — Curso de
+          Programação Básica em Python.
+        </p>
+
+        <p>
+          O documento apresenta a descrição do projeto,
+          seus objetivos, metodologia, conteúdos desenvolvidos,
+          ferramentas utilizadas e resultados.
+        </p>
+
+        <a class="botao"
+           href="./relatorio-extensao-vii.pdf"
+           target="_blank"
+           rel="noopener">
+          Visualizar relatório em PDF
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
   <footer>
-    <p>Projeto de Extensão VII — Curso de Programação Básica em Python</p>
-    <p>2026</p>
+    <p><strong>UNIFIL — Projeto de Extensão VII</strong></p>
+    <p>Curso de Programação Básica em Python</p>
+    <p>Matheus Gabriel dos Santos Silva — 2026</p>
   </footer>
+
+  <script>
+    function mostrarPagina(id, botao) {
+
+      const paginas = document.querySelectorAll(".pagina");
+      const botoes = document.querySelectorAll("nav button");
+
+      paginas.forEach(function(pagina) {
+        pagina.classList.remove("ativa");
+      });
+
+      botoes.forEach(function(item) {
+        item.classList.remove("ativo");
+      });
+
+      document.getElementById(id).classList.add("ativa");
+      botao.classList.add("ativo");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
 
 </body>
 </html>
+
