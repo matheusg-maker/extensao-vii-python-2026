@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Programação Básica em Python</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f9;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #14213d;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #dce4f2;
+    }
+
+    nav {
+      background: #20365f;
+      padding: 13px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 13px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .intro {
+      background: white;
+      padding: 28px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    h2 {
+      color: #14213d;
+      margin-bottom: 15px;
+    }
+
+    .aulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .aula {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    .aula img {
+      width: 100%;
+      display: block;
+    }
+
+    .aula-conteudo {
+      padding: 18px;
+    }
+
+    .aula h3 {
+      color: #14213d;
+      margin-bottom: 8px;
+    }
+
+    .aula p {
+      margin-bottom: 15px;
+      color: #536170;
+    }
+
+    .botao {
+      display: inline-block;
+      background: #1769aa;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .botao:hover {
+      background: #104d80;
+    }
+
+    .relatorio {
+      background: white;
+      padding: 28px;
+      border-radius: 10px;
+      margin-top: 30px;
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    footer {
+      background: #14213d;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Curso de Programação Básica em Python</h1>
+    <p>Projeto de Extensão VII — 2026</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre o curso</a>
+    <a href="#aulas">Aulas</a>
+    <a href="#relatorio">Relatório</a>
+  </nav>
+
+  <main class="container">
+
+    <section class="intro" id="sobre">
+      <h2>Sobre o projeto</h2>
+
+      <p>
+        Este site apresenta o projeto de extensão Curso de Programação
+        Básica em Python, desenvolvido com o objetivo de introduzir
+        conceitos fundamentais de programação para pessoas iniciantes.
+      </p>
+
+      <p>
+        O curso utiliza a linguagem Python e o ambiente Google Colab,
+        com explicações progressivas, exemplos práticos e atividades
+        que facilitam o aprendizado.
+      </p>
+
+      <p>
+        O conteúdo está organizado em uma introdução e dez aulas,
+        disponibilizadas em vídeo no YouTube.
+      </p>
+    </section>
+
+    <section id="aulas">
+      <h2>Conteúdo do curso</h2>
+
+      <div class="aulas">
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/w-5DrfxkWU0/hqdefault.jpg" alt="Introdução ao curso">
+          <div class="aula-conteudo">
+            <h3>Introdução — Apresentação do curso</h3>
+            <p>Conheça a proposta, os objetivos e a organização do curso.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=w-5DrfxkWU0" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/mYg2DzmJXJo/hqdefault.jpg" alt="Introdução à programação">
+          <div class="aula-conteudo">
+            <h3>Aula 01 — Introdução à programação</h3>
+            <p>Primeiros conceitos sobre programação e linguagem Python.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=mYg2DzmJXJo" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/ZFzM2QNFf9E/hqdefault.jpg" alt="Google Colab">
+          <div class="aula-conteudo">
+            <h3>Aula 02 — Conhecendo o Google Colab</h3>
+            <p>Conheça o ambiente utilizado para escrever e executar códigos Python.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=ZFzM2QNFf9E" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/EpPAMsdrAaw/hqdefault.jpg" alt="Primeiro programa">
+          <div class="aula-conteudo">
+            <h3>Aula 03 — Primeiro programa</h3>
+            <p>Aprenda a utilizar print() e comentários no código.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=EpPAMsdrAaw" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/zNGkrsht56Y/hqdefault.jpg" alt="Variáveis">
+          <div class="aula-conteudo">
+            <h3>Aula 04 — Variáveis</h3>
+            <p>Entenda como armazenar e utilizar informações em Python.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=zNGkrsht56Y" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/YETjm2oN490/hqdefault.jpg" alt="Tipos de dados">
+          <div class="aula-conteudo">
+            <h3>Aula 05 — Tipos de dados</h3>
+            <p>Conheça strings, números inteiros, números decimais e booleanos.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=YETjm2oN490" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/xOi4oY-cxjs/hqdefault.jpg" alt="Entrada de dados">
+          <div class="aula-conteudo">
+            <h3>Aula 06 — Entrada de dados</h3>
+            <p>Aprenda a receber informações do usuário com input().</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=xOi4oY-cxjs" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/kGjFnUV_V_c/hqdefault.jpg" alt="Operadores matemáticos">
+          <div class="aula-conteudo">
+            <h3>Aula 07 — Operadores matemáticos</h3>
+            <p>Utilize operações matemáticas em programas Python.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=kGjFnUV_V_c" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/o8oFUu3iqE0/hqdefault.jpg" alt="Condicionais">
+          <div class="aula-conteudo">
+            <h3>Aula 08 — Estruturas condicionais</h3>
+            <p>Aprenda a utilizar if, elif e else para tomar decisões.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=o8oFUu3iqE0" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/w4UQIScy778/hqdefault.jpg" alt="Repetições e listas">
+          <div class="aula-conteudo">
+            <h3>Aula 09 — Repetições e listas</h3>
+            <p>Conheça os comandos for e while e aprenda a trabalhar com listas.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=w4UQIScy778" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+        <article class="aula">
+          <img src="https://img.youtube.com/vi/xKKrJyyMOWQ/hqdefault.jpg" alt="Projeto final">
+          <div class="aula-conteudo">
+            <h3>Aula 10 — Projeto final</h3>
+            <p>Desenvolvimento de uma calculadora interativa utilizando Python.</p>
+            <a class="botao" href="https://www.youtube.com/watch?v=xKKrJyyMOWQ" target="_blank" rel="noopener">Assistir aula</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="relatorio" id="relatorio">
+      <h2>Relatório do projeto</h2>
+      <p>
+        Consulte o relatório com a descrição do projeto, seus objetivos,
+        metodologia, conteúdos desenvolvidos e resultados.
+      </p>
+      <br>
+      <a class="botao" href="relatorio-extensao-vii.pdf" target="_blank">
+        Visualizar relatório em PDF
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Projeto de Extensão VII — Curso de Programação Básica em Python</p>
+    <p>2026</p>
+  </footer>
+
+</body>
+</html>
